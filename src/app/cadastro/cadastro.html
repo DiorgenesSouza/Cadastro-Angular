@@ -1,1 +1,64 @@
-<p>cadastro works!</p>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div fxLayout="column" fxFlex="60">
+    <form #clientesFrm="ngForm">
+      <mat-card>
+
+        <mat-card-header>
+          <mat-card-title>Dados Pessoais</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+
+          <div fxLayout="row">
+            <div fxLayout="column" fxFlex="800px">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Nome: *</mat-label>
+              <input matInput placeholder="Ex: José da Silva">
+            </mat-form-field>
+            </div>
+          </div>
+
+          <div fxLayout="row">
+            <div fxLayout="column" fxFlex="800px">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Email: *</mat-label>
+              <input matInput placeholder="Digite seu email">
+            </mat-form-field>
+            </div>
+          </div>
+
+          <div fxLayout="row">
+            <div fxLayout="column" fxFlex="400px">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>CPF: *</mat-label>
+              <input matInput placeholder="Digite seu CPF">
+            </mat-form-field>
+            </div>
+          </div>
+
+          <div fxLayout="row">
+            <div fxLayout="column" fxFlex="400px">
+            <mat-form-field class="full-width" appearance="fill">
+              <mat-label>Data de Nascimento: *</mat-label>
+              <input matInput placeholder="Digite sua data de nascimento">
+            </mat-form-field>
+            </div>
+          </div>
+
+        </mat-card-content>
+        <mat-card-actions>
+            <div fxlayout="row">
+                <div fxlaout="collumn">
+                    <button mat-flat-button color="primary">
+                <mat-icon fontIcon="save"></mat-icon>
+                Salvar
+            </button>
+                </div>
+            </div>
+            
+        </mat-card-actions>
+
+      </mat-card>
+    </form>
+  </div>
+</div>

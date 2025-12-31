@@ -6,6 +6,7 @@ import {MatFormField, MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule} from '@angular/material/input'
 import { MatIconModule} from '@angular/material/icon'
 import { MatButtonModule} from '@angular/material/button'
+import { Cliente } from './cliente';
 
 
 @Component({
@@ -23,4 +24,14 @@ import { MatButtonModule} from '@angular/material/button'
   templateUrl: './cadastro.html',
   styleUrls: ['./cadastro.scss'], // plural (boa prática)
 })
-export class Cadastro {}
+export class Cadastro {
+
+  cliente: Cliente = Cliente.newCliente();
+
+  salvar(){
+    console.log("Dados Cliente: ", this.cliente);
+
+  }
+
+}
+

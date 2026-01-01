@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -9,6 +9,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBar } from '@angular/material/snack-bar'; 
 import { MatTableModule } from '@angular/material/table';
 
 import { ClienteService } from '../cliente-service';
@@ -40,6 +41,7 @@ export class Consulta implements OnInit {
   nomeBusca: string = '';
   listaClientes: Cliente[] = [];
   colunasTable: string[] = ['id', 'nome', 'cpf', 'dataNascimento', 'email', 'acoes'];
+  snack: MatSnackBar = inject(MatSnackBar);
  
 
   constructor(
@@ -68,6 +70,7 @@ preparaDeletar(cliente: Cliente){
 deletar(cliente: Cliente){
   this.service.deletar(cliente);
   this.listaClientes = this.service.pesquisarClientes('');
+  this.snack.open('Item deletado com sucesso!', 'OK');
  
   
 }

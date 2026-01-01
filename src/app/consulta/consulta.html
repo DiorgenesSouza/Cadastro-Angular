@@ -1,0 +1,30 @@
+<div fxLayout="row" fxLayoutAlign="center">
+    <div fxLayout="collun" fxFlex="1000px">
+        <form class="mt-60" #buscaForm="ngForm">
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>Consulta</mat-card-title>
+                </mat-card-header>
+            </mat-card>
+            <mat-card-content class="mt-20">
+                <div fxLayout="row">
+                    <div fxLayout="collun" fxFlex="950px">
+                        <mat-form-field class="full-width">
+                            <mat-label>Nome:</mat-label>
+                            <input matInput placeholder="ex: josé" />
+                        </mat-form-field>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <button type="submit" mat-flat-button color="primary">
+                    <mat-icon fontIcon="search"></mat-icon>
+                    Pesquisar
+                </button>
+            </mat-card-actions>
+
+        </form>
+
+    </div>
+
+</div>
